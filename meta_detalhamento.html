@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Meta - Detalhamento Regional - Campanhas Filosofia Cotrim</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: white;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .content-wrapper {
+            padding: 50px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            color: white;
+        }
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .costs-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .costs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .costs-table th {
+            background: #764ba2;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .costs-table th:first-child {
+            border-top-left-radius: 10px;
+        }
+        .costs-table th:last-child {
+            border-top-right-radius: 10px;
+        }
+        .costs-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .costs-table tr:nth-child(even) {
+            background: #f1f5f9;
+        }
+        .costs-table tr:hover {
+            background: #e2e8f0;
+        }
+        .highlight-cell {
+            color: #764ba2;
+            font-weight: 600;
+        }
+        .comparison-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            gap: 30px;
+        }
+        .comparison-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .comparison-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .comparison-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+        .comparison-label {
+            font-size: 1rem;
+            color: #555;
+            text-align: center;
+        }
+        .divider {
+            width: 2px;
+            background: #e2e8f0;
+        }
+        .insights-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 25px;
+            color: white;
+            margin-top: 30px;
+        }
+        .insights-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .insight-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .insight-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .insight-text {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    </style>
+
+<style>
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 15px 0;
+    border-top: 1px solid #eaeaea;
+}
+.nav-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+.nav-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.nav-button i {
+    margin: 0 8px;
+}
+.nav-button.disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+.nav-button.disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+.home-button {
+    background: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+}
+</style>
+</head>
+<body>
+<div class="slide-container">
+<div class="content-wrapper">
+<div class="header">
+<h1 class="title">Meta – Detalhamento de custos por região</h1>
+</div>
+<div class="main-content">
+<div class="costs-card">
+<h2 class="card-title">Custos por grupo de anúncios/regiões (campanha principal)</h2>
+<table class="costs-table">
+<thead>
+<tr>
+<th>Região</th>
+<th>Investimento</th>
+<th>Alcance</th>
+<th>Cliques</th>
+<th>CPC</th>
+<th>CPM</th>
+<th>CTR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nordeste</td>
+<td>R$ 444,16</td>
+<td>106.630</td>
+<td>1.579</td>
+<td class="highlight-cell">R$ 0,28</td>
+<td>R$ 4,17</td>
+<td>1,48%</td>
+</tr>
+<tr>
+<td>Norte e Centro-Oeste</td>
+<td>R$ 183,00</td>
+<td>41.950</td>
+<td>683</td>
+<td class="highlight-cell">R$ 0,27</td>
+<td>R$ 4,36</td>
+<td>1,63%</td>
+</tr>
+<tr>
+<td>Sul</td>
+<td>R$ 184,01</td>
+<td>38.468</td>
+<td>669</td>
+<td class="highlight-cell">R$ 0,28</td>
+<td>R$ 4,78</td>
+<td>1,74%</td>
+</tr>
+<tr>
+<td>Sudeste (exceto SP e RJ)</td>
+<td>R$ 92,11</td>
+<td>25.048</td>
+<td>374</td>
+<td class="highlight-cell">R$ 0,25</td>
+<td>R$ 3,68</td>
+<td>1,49%</td>
+</tr>
+<tr>
+<td>SP, RJ e DF</td>
+<td>R$ 92,17</td>
+<td>24.960</td>
+<td>347</td>
+<td class="highlight-cell">R$ 0,27</td>
+<td>R$ 3,69</td>
+<td>1,39%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="comparison-card">
+<div class="comparison-column">
+<h3 class="comparison-title">Custo médio por clique atual</h3>
+<div class="comparison-value">R$ 0,27</div>
+<div class="comparison-label">Após segmentação regional</div>
+</div>
+<div class="divider"></div>
+<div class="comparison-column">
+<h3 class="comparison-title">Custo médio por clique anterior</h3>
+<div class="comparison-value">R$ 0,22</div>
+<div class="comparison-label">Antes da segmentação</div>
+</div>
+<div class="divider"></div>
+<div class="comparison-column">
+<h3 class="comparison-title">Diferença</h3>
+<div class="comparison-value">+22%</div>
+<div class="comparison-label">Impacto nos custos</div>
+</div>
+</div>
+<div class="insights-card">
+<h2 class="insights-title">Insights sobre a segmentação regional</h2>
+<div class="insights-grid">
+<div class="insight-item">
+<div class="insight-icon">
+<i class="fas fa-chart-line"></i>
+</div>
+<div class="insight-text">
+                                Mesmo com aumento de 22% no CPC, os custos continuam muito abaixo da média do mercado
+                            </div>
+</div>
+<div class="insight-item">
+<div class="insight-icon">
+<i class="fas fa-map-marked-alt"></i>
+</div>
+<div class="insight-text">
+                                A distribuição atual prioriza regiões estratégicas como Nordeste, garantindo maior alcance onde necessário
+                            </div>
+</div>
+<div class="insight-item">
+<div class="insight-icon">
+<i class="fas fa-cogs"></i>
+</div>
+<div class="insight-text">
+                                Os novos conjuntos de anúncios ainda estão em fase de otimização pelo algoritmo
+                            </div>
+</div>
+<div class="insight-item">
+<div class="insight-icon">
+<i class="fas fa-bullseye"></i>
+</div>
+<div class="insight-text">
+                                Expectativa de melhoria gradual nos custos à medida que o algoritmo aprende com cada região
+                            </div>
+</div>
+</div>
+</div>
+</div>
+<div class="navigation-buttons"><a class="nav-button" href="meta_evolucao.html"><i class="fas fa-arrow-left"></i> Voltar</a><a class="nav-button home-button" href="capa.html"><i class="fas fa-home"></i> Início</a><a class="nav-button" href="todas_campanhas.html">Avançar <i class="fas fa-arrow-right"></i></a></div></div>
+</div>
+</body>
+</html>

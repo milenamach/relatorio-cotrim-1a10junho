@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Análise e Recomendações - Campanhas Filosofia Cotrim</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: white;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .content-wrapper {
+            padding: 50px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            color: white;
+        }
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .main-content {
+            display: flex;
+            flex: 1;
+            gap: 30px;
+        }
+        .left-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .analysis-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            flex: 1;
+        }
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .analysis-text {
+            color: #444;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        .recommendations-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .recommendation-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        .recommendation-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .recommendation-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .recommendation-text {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .conclusion-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 25px;
+            color: white;
+            margin-top: 20px;
+        }
+        .conclusion-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .conclusion-text {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+    </style>
+
+<style>
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 15px 0;
+    border-top: 1px solid #eaeaea;
+}
+.nav-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+.nav-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.nav-button i {
+    margin: 0 8px;
+}
+.nav-button.disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+.nav-button.disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+.home-button {
+    background: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+}
+</style>
+</head>
+<body>
+<div class="slide-container">
+<div class="content-wrapper">
+<div class="header">
+<h1 class="title">Análise e recomendações</h1>
+</div>
+<div class="main-content">
+<div class="left-column">
+<div class="analysis-card">
+<h2 class="card-title">Análise da Segmentação</h2>
+<p class="analysis-text">
+                            Mesmo com a segmentação que "encareceu" a campanha, os custos continuam muito abaixo da média do mercado em qualquer dos segmentos, posicionamentos ou formatos de anúncio.
+                        </p>
+<p class="analysis-text">
+                            A segmentação atual faz sentido dentro da ideia de apostar mais no interior do que em grandes centros e priorizar o nordeste. Houve impacto nos custos globais, mas foi pequeno.
+                        </p>
+<p class="analysis-text">
+                            Não recomendo granular mais a segmentação. Mas, frente aos custos de cada região, e o que vocês entendem que são os melhores mercados, pode-se pensar em uma distribuição de orçamento diferente para cada região.
+                        </p>
+</div>
+<div class="analysis-card">
+<h2 class="card-title">Análise de Custos</h2>
+<p class="analysis-text">
+                            Estamos com custos excelentes e em queda tanto em Google quanto em Meta. Recomenda-se, se possível, aumentar o orçamento global da divulgação, para investirmos mais em Google sem diminuir o orçamento em Meta.
+                        </p>
+<div style="display: flex; gap: 15px; margin-top: 20px;">
+<div style="flex: 1; background: #f1f5f9; border-radius: 10px; padding: 15px; text-align: center;">
+<div style="font-size: 0.9rem; color: #555; margin-bottom: 5px;">Google CPC</div>
+<div style="font-weight: 700; color: #764ba2; font-size: 1.5rem;">R$ 1,30</div>
+<div style="font-size: 0.8rem; color: #666; margin-top: 5px;">Em queda constante</div>
+</div>
+<div style="flex: 1; background: #f1f5f9; border-radius: 10px; padding: 15px; text-align: center;">
+<div style="font-size: 0.9rem; color: #555; margin-bottom: 5px;">Meta CPC</div>
+<div style="font-weight: 700; color: #764ba2; font-size: 1.5rem;">R$ 0,26</div>
+<div style="font-size: 0.8rem; color: #666; margin-top: 5px;">25% do custo médio</div>
+</div>
+</div>
+</div>
+</div>
+<div class="right-column">
+<div class="analysis-card">
+<h2 class="card-title">Principais Recomendações</h2>
+<div class="recommendations-grid">
+<div class="recommendation-card">
+<div class="recommendation-icon">
+<i class="fas fa-dollar-sign"></i>
+</div>
+<div class="recommendation-title">Aumentar Orçamento</div>
+<div class="recommendation-text">
+                                    Aproveitar os custos baixos para ampliar o alcance da campanha, especialmente no Google onde os custos estão em queda constante.
+                                </div>
+</div>
+<div class="recommendation-card">
+<div class="recommendation-icon">
+<i class="fas fa-map-marked-alt"></i>
+</div>
+<div class="recommendation-title">Manter Segmentação Regional</div>
+<div class="recommendation-text">
+                                    Continuar com a estratégia de priorização do Nordeste e interior, ajustando percentuais conforme necessidade específica de cada região.
+                                </div>
+</div>
+<div class="recommendation-card">
+<div class="recommendation-icon">
+<i class="fas fa-chart-pie"></i>
+</div>
+<div class="recommendation-title">Distribuição de Investimento</div>
+<div class="recommendation-text">
+                                    Manter a proporção 70% anúncios e 30% posts na Meta, que tem se mostrado eficiente para awareness e conversão.
+                                </div>
+</div>
+<div class="recommendation-card">
+<div class="recommendation-icon">
+<i class="fas fa-search"></i>
+</div>
+<div class="recommendation-title">Otimizar Palavras-chave</div>
+<div class="recommendation-text">
+                                    Expandir o conjunto de palavras-chave no Google Ads, focando em termos específicos como "PNLD 2026", "livro filosofia ensino médio" e "material didático filosofia", que demonstraram melhor relação custo-benefício e maior taxa de conversão.
+                                </div>
+</div>
+</div>
+</div>
+<div class="conclusion-card">
+<h2 class="conclusion-title">Conclusão</h2>
+<p class="conclusion-text">
+                            As campanhas estão performando muito acima da média do mercado, com custos excepcionalmente baixos e resultados expressivos. A estratégia atual está validada e pode ser expandida para maximizar o alcance e impacto junto ao público-alvo de professores para o PNLD 2026.
+                        </p>
+</div>
+</div>
+</div>
+<div class="navigation-buttons"><a class="nav-button" href="todas_campanhas.html"><i class="fas fa-arrow-left"></i> Voltar</a><a class="nav-button home-button" href="capa.html"><i class="fas fa-home"></i> Início</a><span class="nav-button disabled">Avançar <i class="fas fa-arrow-right"></i></span></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Relatório de resultados - Campanhas Filosofia Cotrim</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .content-wrapper {
+            padding: 60px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.1;
+        }
+        .subtitle {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 800px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+            max-width: 800px;
+        }
+        .info-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .info-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+        .info-value {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+        .decorative-element {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            top: -100px;
+            right: -100px;
+        }
+        .decorative-element-2 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            bottom: -75px;
+            left: -75px;
+        }
+    </style>
+
+<style>
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 15px 0;
+    border-top: 1px solid #eaeaea;
+}
+.nav-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+.nav-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.nav-button i {
+    margin: 0 8px;
+}
+.nav-button.disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+.nav-button.disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+.home-button {
+    background: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+}
+</style>
+</head>
+<body>
+<div class="slide-container">
+<div class="decorative-element"></div>
+<div class="decorative-element-2"></div>
+<div class="content-wrapper">
+<h1 class="main-title">
+                Relatório de resultados
+            </h1>
+<p class="subtitle">
+                Campanhas Filosofia Cotrim
+            </p>
+<div class="info-grid">
+<div class="info-card">
+<div class="info-label">Período</div>
+<div class="info-value">1 a 10 de junho</div>
+</div>
+<div class="info-card">
+<div class="info-label">Plataformas</div>
+<div class="info-value">Google e Meta Ads</div>
+</div>
+<div class="info-card">
+<div class="info-label">Público-alvo</div>
+<div class="info-value">Professores PNLD 2026</div>
+</div>
+<div class="info-card">
+<div class="info-label">Métrica Principal</div>
+<div class="info-value">Cliques no Link</div>
+</div>
+</div>
+<div class="navigation-buttons"><span class="nav-button disabled"><i class="fas fa-arrow-left"></i> Voltar</span><a class="nav-button home-button" href="capa.html"><i class="fas fa-home"></i> Início</a><a class="nav-button" href="introducao.html">Avançar <i class="fas fa-arrow-right"></i></a></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Resultados de todas as campanhas - Campanhas Filosofia Cotrim</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: white;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .content-wrapper {
+            padding: 50px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            color: white;
+        }
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .campaigns-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .campaigns-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .campaigns-table th {
+            background: #764ba2;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .campaigns-table th:first-child {
+            border-top-left-radius: 10px;
+        }
+        .campaigns-table th:last-child {
+            border-top-right-radius: 10px;
+        }
+        .campaigns-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .campaigns-table tr:nth-child(even) {
+            background: #f1f5f9;
+        }
+        .campaigns-table tr:hover {
+            background: #e2e8f0;
+        }
+        .highlight-cell {
+            color: #764ba2;
+            font-weight: 600;
+        }
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .insight-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 20px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .insight-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .insight-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .insight-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .best-campaigns {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .best-campaign-card {
+            flex: 1;
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        .best-campaign-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .best-campaign-name {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .best-campaign-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #764ba2;
+            text-align: center;
+        }
+        .best-campaign-icon {
+            font-size: 2rem;
+            color: #764ba2;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    </style>
+
+<style>
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 15px 0;
+    border-top: 1px solid #eaeaea;
+}
+.nav-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+.nav-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.nav-button i {
+    margin: 0 8px;
+}
+.nav-button.disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+.nav-button.disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+.home-button {
+    background: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+}
+</style>
+</head>
+<body>
+<div class="slide-container">
+<div class="content-wrapper">
+<div class="header">
+<h1 class="title">Resultados de todas as campanhas</h1>
+</div>
+<div class="main-content">
+<div class="campaigns-card">
+<h2 class="card-title">Dados completos de todas as campanhas (1 a 10 de junho)</h2>
+<table class="campaigns-table">
+<thead>
+<tr>
+<th>Nome da campanha</th>
+<th>Alcance</th>
+<th>Cliques</th>
+<th>CPC</th>
+<th>Investimento</th>
+<th>CPM</th>
+<th>CTR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PNLD2026 - Anúncios Livro - Visita ao site</td>
+<td>355.016</td>
+<td>7.600</td>
+<td class="highlight-cell">R$ 0,25</td>
+<td>R$ 1.893,76</td>
+<td>R$ 2,78</td>
+<td>1,12%</td>
+</tr>
+<tr>
+<td>PNLD2026 - RTGT Posts Perfil</td>
+<td>95.735</td>
+<td>1.153</td>
+<td class="highlight-cell">R$ 0,30</td>
+<td>R$ 342,37</td>
+<td>R$ 3,06</td>
+<td>1,03%</td>
+</tr>
+<tr>
+<td>PNLD2026 - Post 02/06 -Fé e ciência</td>
+<td>58.204</td>
+<td>552</td>
+<td class="highlight-cell">R$ 0,26</td>
+<td>R$ 143,66</td>
+<td>R$ 2,12</td>
+<td>0,82%</td>
+</tr>
+<tr>
+<td>PNLD2026 - Post 31/05 -Arte</td>
+<td>47.236</td>
+<td>490</td>
+<td class="highlight-cell">R$ 0,25</td>
+<td>R$ 124,19</td>
+<td>R$ 2,36</td>
+<td>0,93%</td>
+</tr>
+<tr>
+<td>PNLD2026 - Post 04/06 - Projetar</td>
+<td>44.150</td>
+<td>447</td>
+<td class="highlight-cell">R$ 0,27</td>
+<td>R$ 120,97</td>
+<td>R$ 2,45</td>
+<td>0,90%</td>
+</tr>
+<tr>
+<td>PNLD2026 - Post 06/06 - Fromm</td>
+<td>36.791</td>
+<td>388</td>
+<td class="highlight-cell">R$ 0,31</td>
+<td>R$ 119,83</td>
+<td>R$ 2,80</td>
+<td>0,91%</td>
+</tr>
+<tr>
+<td>PNLD2026 - Post 09/06 - Ética</td>
+<td>28.309</td>
+<td>249</td>
+<td class="highlight-cell">R$ 0,31</td>
+<td>R$ 76,65</td>
+<td>R$ 2,47</td>
+<td>0,80%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="insights-grid">
+<div class="insight-card">
+<div class="insight-title">Total de alcance</div>
+<div class="insight-value">665.441</div>
+<div class="insight-description">Professores impactados</div>
+</div>
+<div class="insight-card">
+<div class="insight-title">Total de cliques</div>
+<div class="insight-value">10.879</div>
+<div class="insight-description">Interações qualificadas</div>
+</div>
+<div class="insight-card">
+<div class="insight-title">Investimento total</div>
+<div class="insight-value">R$ 2.821,43</div>
+<div class="insight-description">Orçamento utilizado</div>
+</div>
+</div>
+<div class="best-campaigns">
+<div class="best-campaign-card">
+<div class="best-campaign-icon">
+<i class="fas fa-bolt"></i>
+</div>
+<div class="best-campaign-title">Campanha mais eficiente</div>
+<div class="best-campaign-name">PNLD2026 - Anúncios Livro - Visita ao site</div>
+<div class="best-campaign-value">R$ 0,25 por clique</div>
+</div>
+<div class="best-campaign-card">
+<div class="best-campaign-icon">
+<i class="fas fa-bullhorn"></i>
+</div>
+<div class="best-campaign-title">Campanha com maior alcance</div>
+<div class="best-campaign-name">PNLD2026 - Anúncios Livro - Visita ao site</div>
+<div class="best-campaign-value">355.016 professores</div>
+</div>
+<div class="best-campaign-card">
+<div class="best-campaign-icon">
+<i class="fas fa-mouse-pointer"></i>
+</div>
+<div class="best-campaign-title">Campanha com maior CTR</div>
+<div class="best-campaign-name">PNLD2026 - Anúncios Livro - Visita ao site</div>
+<div class="best-campaign-value">1,12% de taxa de clique</div>
+</div>
+</div>
+</div>
+<div class="navigation-buttons"><a class="nav-button" href="meta_detalhamento.html"><i class="fas fa-arrow-left"></i> Voltar</a><a class="nav-button home-button" href="capa.html"><i class="fas fa-home"></i> Início</a><a class="nav-button" href="analise_recomendacoes.html">Avançar <i class="fas fa-arrow-right"></i></a></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Introdução - Campanhas Filosofia Cotrim</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: white;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .content-wrapper {
+            padding: 50px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px 40px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            color: white;
+        }
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .main-content {
+            display: flex;
+            flex: 1;
+            gap: 30px;
+        }
+        .platform-card {
+            flex: 1;
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .platform-card:hover {
+            transform: translateY(-5px);
+        }
+        .platform-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        .google-icon {
+            color: #4285F4;
+        }
+        .meta-icon {
+            color: #1877F2;
+        }
+        .platform-name {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .platform-desc {
+            text-align: center;
+            color: #555;
+            font-size: 1.1rem;
+        }
+        .period-banner {
+            background: #764ba2;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-top: 40px;
+        }
+    </style>
+
+<style>
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 15px 0;
+    border-top: 1px solid #eaeaea;
+}
+.nav-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+.nav-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.nav-button i {
+    margin: 0 8px;
+}
+.nav-button.disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+.nav-button.disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+.home-button {
+    background: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+}
+</style>
+</head>
+<body>
+<div class="slide-container">
+<div class="content-wrapper">
+<div class="header">
+<h1 class="title">Google e Meta Ads</h1>
+<p class="subtitle">Facebook e Instagram</p>
+</div>
+<div class="main-content">
+<div class="platform-card">
+<i class="fab fa-google platform-icon google-icon"></i>
+<h2 class="platform-name">Google Ads</h2>
+<p class="platform-desc">Campanhas de busca otimizadas para termos relacionados ao PNLD 2026 e livros didáticos de filosofia</p>
+</div>
+<div class="platform-card">
+<i class="fab fa-facebook platform-icon meta-icon"></i>
+<h2 class="platform-name">Meta Ads</h2>
+<p class="platform-desc">Estratégia híbrida com anúncios explícitos e posts de conteúdo para engajamento e conversão</p>
+</div>
+</div>
+<div class="period-banner">
+<i class="far fa-calendar-alt mr-2"></i> Período: 1 a 10 de junho
+            </div>
+<div class="navigation-buttons"><a class="nav-button" href="capa.html"><i class="fas fa-arrow-left"></i> Voltar</a><a class="nav-button home-button" href="capa.html"><i class="fas fa-home"></i> Início</a><a class="nav-button" href="google_resultados.html">Avançar <i class="fas fa-arrow-right"></i></a></div></div>
+</div>
+</body>
+</html>
